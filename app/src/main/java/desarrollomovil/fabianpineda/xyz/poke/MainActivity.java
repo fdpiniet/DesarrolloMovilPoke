@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -179,13 +181,14 @@ public class MainActivity extends AppCompatActivity {
         pokemon1Nombre.setText(nombre1);
         pokemon2Nombre.setText(nombre2);
 
-        // por hacer: cargar imágenes. Las URLs están en imagen1 e imagen2, respectivamente.
-
         vida1 = 100;
         vida2 = 100;
 
         pokemon1HP.setText(String.valueOf(vida1));
         pokemon2HP.setText(String.valueOf(vida2));
+
+        Glide.with(this).load(imagen1).into(pokemon1Imagen);
+        Glide.with(this).load(imagen2).into(pokemon2Imagen);
     }
 
     private void procesarJSON(String[] datos) {
