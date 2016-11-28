@@ -132,14 +132,14 @@ public class MainActivity extends AppCompatActivity {
 
         if (vida1 < 1) {
             vida1 = 0;
-            salida = salida + nombre1 + " ha sido derrotado. " + nombre2 + " gana la batalla!\n";
+            salida = salida + nombre1 + " ha sido derrotado. " + nombre2 + " gana la batalla!\nPresione el botón para iniciar una nueva batalla.";
             actualizarInformacion(salida);
             pokemon1HP.setText(String.valueOf(vida1));
             enProgreso = false;
             return;
         } else if (vida2 < 1) {
             vida2 = 0;
-            salida = salida + nombre2 + " ha sido derrotado. " + nombre1 + " gana la batalla!\n";
+            salida = salida + nombre2 + " ha sido derrotado. " + nombre1 + " gana la batalla!\nPresione el botón para iniciar una nueva batalla.";
             actualizarInformacion(salida);
             pokemon2HP.setText(String.valueOf(vida2));
             enProgreso = false;
@@ -162,11 +162,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (vida1 < 1) {
             vida1 = 0;
-            salida = salida + nombre1 + " ha sido derrotado. " + nombre2 + " gana la batalla!\n";
+            salida = salida + nombre1 + " ha sido derrotado. " + nombre2 + " gana la batalla!\nPresione el botón para iniciar una nueva batalla.";
             enProgreso = false;
         } else if (vida2 < 1) {
             vida2 = 0;
-            salida = salida + nombre2 + " ha sido derrotado. " + nombre1 + " gana la batalla!\n";
+            salida = salida + nombre2 + " ha sido derrotado. " + nombre1 + " gana la batalla!\nPresione el botón para iniciar una nueva batalla.";
             enProgreso = false;
         }
 

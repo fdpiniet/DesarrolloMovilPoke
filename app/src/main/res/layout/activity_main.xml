@@ -11,63 +11,66 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="desarrollomovil.fabianpineda.xyz.poke.MainActivity">
 
-    <ImageView
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/poke1nombre"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="70dp"
-        android:adjustViewBounds="true"
-        android:id="@+id/poke2img" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="156dp"
-        android:adjustViewBounds="true"
-        android:id="@+id/poke1img" />
+        android:id="@+id/poke2nombre"
+        android:textAlignment="textEnd"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/poke1nombre"
         android:layout_alignParentStart="true"
-        android:id="@+id/poke1nombre" />
-
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/poke2img"
-        android:layout_alignParentStart="true"
-        android:id="@+id/poke2nombre" />
-
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:id="@+id/poke1hp" />
 
     <TextView
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/poke2nombre"
-        android:layout_alignStart="@+id/poke1hp"
-        android:id="@+id/poke2hp" />
+        android:layout_below="@+id/poke2nombre"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/poke2hp"
+        android:textAlignment="textEnd" />
 
-    <TextView
-        android:text=""
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/poke1img"
-        android:layout_toEndOf="@+id/poke1img"
-        android:id="@+id/informacion" />
+        android:weightSum="2"
+        android:layout_below="@+id/poke1hp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/linearlayout1">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:id="@+id/poke1img"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:id="@+id/poke2img"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true" />
+    </LinearLayout>
 
     <Button
         android:text="Luchar"
@@ -76,4 +79,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/botonAccion" />
+
+    <TextView
+        android:text="Presione el boton para inciar una nueva batalla."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/informacion"
+        android:layout_above="@+id/botonAccion"
+        android:layout_alignParentEnd="true"
+        android:gravity="bottom" />
+
 </RelativeLayout>
